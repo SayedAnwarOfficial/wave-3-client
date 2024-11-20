@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.underlin-hover {
+  position: relative;
+}
+
+.underlin-hover::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c9ab81;
+  transition: width 0.3s;
+}
+
+.underlin-hover:hover::before {
+  width: 100%;
+}
+
+.hero-overlay {
+  background-color: var(--fallback-n, oklch(var(--n) / var(--tw-bg-opacity)));
+  --tw-bg-opacity: 0.54;
+  --n: 0 0 0;
+}
+
+.react-tabs__tab--selected {
+  color: #c9ab81 !important;
+  border-color: none !important;
+  background-color: transparent !important;
+}
+
+.menu li a:hover {
+  background-color: #ffffff;
+}
