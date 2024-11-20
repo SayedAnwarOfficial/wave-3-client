@@ -51,6 +51,20 @@ const Navbar = () => {
           Order Food
         </NavLink>
       </li>
+      <li className="ml-2 underlin-hover font-bold sm:text-[0.9rem]">
+        <NavLink
+          to="/dashboard"
+          className={({ isActive, isPending }) =>
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-[#c9ab81]"
+              : " dark:text-white"
+          }
+        >
+          Dashboard
+        </NavLink>
+      </li>
     </>
   );
 
